@@ -1,41 +1,50 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Criptografia - JavaScript</title>
-    </head>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/js.js"></script>
-    <body onload="mostra('');">
-        <div>
-            <img src="img/alura.png" width="150px" class="elemento_center"><hr>
-            <section class="content">
-            <div class="content1">
-                <h3>Criptador</h3>               
-                    <form action="#" method="#">
-                    <h4>Texto Original</h4>
-                    <input type="text" placeholder="Insira o texto" name="cripto" id="cripto" class="campo" autofocus>
-                    <input type="button" value="Criptografar" class="botao transition-1" onclick="crip('cripto')">
-                    <h4>Texto Criptografado</h4>
-                    <input type="text" placeholder="Insira o texto" name="decripto" id="des" class="campo">
-                    <input type="button" value="Descriptografar" class="botao transition-1" onclick="descrip('des')">
-                </form> 
-            </div>
-            <div class="content1">
-                <h4>Resultado</h4>
-                <div class="elemento_center" id="img">
-                    
-                </div>
-                <div class="elemento_center" id="result">
-                    <textarea class="textarea" id="res"></textarea>
-                </div>
-                <div class="elemento_center">
-                    <input type="button" class="botao_simples transition-1" value="Copiar Texto" onclick="copiar();" id="botao_exe">
-                </div>  
-            </div>
-            </section>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Criptografador</title>
+</head>
+<body>
+    <main class="display-grid">
+        <div class="grid-item-1">
+            <img src="./img/Logo.svg" alt="Logo Alura">
         </div>
-        <div class="footer">
-            Desenvolvido por Ana Caroline
+        <div class="grid-item-2">
+            <textarea name="texto" id="inptTextArea" placeholder="Insira o texto aqui"></textarea>
+            <div class="box-exclamation">
+                <svg width="17px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd" />
+                </svg>
+                <small>Apenas letras minúsculas e sem acento.</small>
+            </div>
+            <div class="box-controls">
+                <button id="btnEncrypted">Criptografar</button>
+                <button id="btnDecrypted">Descriptografar</button>
+            </div>
         </div>
-    </body>
+        <div class="grid-item-3">
+            <div class="box-result-encriptador">
+                <img class="pre-information" src="./img/imagem_na mensagem.svg" alt="mensagem vazia">
+                <h2 class="pre-information">Nenhuma mensagem encontrada</h2>
+                <span class="pre-information">Insira o texto que deseja criptografar ou descriptografar.</span>
+                <textarea id="outptTextArea" id="inpt_texto" placeholder="Insira o texto aqui"></textarea>
+                <button id="btnCopyResult">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+       
+        Desenvolvido por Ana Caroline
+       
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
